@@ -9,6 +9,8 @@ public class KeyboardEvent implements KeyListener {
     public boolean isD = false;
     public boolean isSpace = false;
     static public KeyboardEvent instance = new KeyboardEvent();
+    public boolean isS = false;
+
     private KeyboardEvent(){
     }
     @Override
@@ -30,6 +32,9 @@ public class KeyboardEvent implements KeyListener {
         if(e.getKeyCode()==KeyEvent.VK_SPACE){
             isSpace = true;
         }
+        if(e.getKeyCode()==KeyEvent.VK_S){
+            isS=true;
+        }
     }
 
     @Override
@@ -45,6 +50,9 @@ public class KeyboardEvent implements KeyListener {
         }
         if(e.getKeyCode()==KeyEvent.VK_SPACE){
             isSpace = false;
+        }
+        if(e.getKeyCode()==KeyEvent.VK_S){
+            isS = false;
         }
     }
 }

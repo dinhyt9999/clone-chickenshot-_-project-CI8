@@ -1,4 +1,12 @@
 package game.background;
 
-public class Background {
+import base.GameObject;
+import renderer.RectRenderer;
+
+import java.awt.*;
+
+public class Background extends GameObject {
+    public Background() {
+        this.renderer = new RectRenderer(Color.BLACK, 600, 1024);
+    }
 }
