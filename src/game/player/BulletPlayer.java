@@ -6,13 +6,11 @@ import base.Vector2D;
 import game.enemy.enemymatrix.EnemyMatrix;
 import physic.BoxCollider;
 import renderer.OvalRenderer;
-import renderer.Renderer;
 
 import java.awt.*;
 
 public class BulletPlayer extends GameObject {
     public Vector2D velocity;
-    private Renderer renderer;
     public BulletPlayer() {
         this.velocity = new Vector2D();
         this.renderer = new OvalRenderer(Color.RED,5,5);
