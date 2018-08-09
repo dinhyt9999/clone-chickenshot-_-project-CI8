@@ -1,5 +1,10 @@
 package base;
 
+import game.enemy.enemymatrix.EnemyMatrix;
+import game.player.BulletPlayer;
+import game.player.Player;
+import physic.BoxCollider;
+
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -29,9 +34,9 @@ public class GameObjectManager {
         this.list.stream().filter(gameObject -> gameObject.isAlive).forEach(gameObject -> gameObject.render(graphics));
     }
 
-//    public Player findPlayer() {
-//        return (Player) this.list.stream().filter(gameObject -> gameObject instanceof Player).findFirst().orElse(null);
-//    }
+    public Player findPlayer() {
+        return (Player) this.list.stream().filter(gameObject -> gameObject instanceof Player).findFirst().orElse(null);
+    }
 
 //    public EnemyFollow checkCollision1(BulletPlayer bulletPlayer) {
 //        return (EnemyFollow) this.list.stream().filter(gameObject -> gameObject.isAlive).filter(gameObject -> gameObject instanceof EnemyFollow).filter(gameObject -> {
@@ -40,12 +45,12 @@ public class GameObjectManager {
 //        }).findFirst().orElse(null);
 //    }
 //
-//    public Enemy checkCollision2(BulletPlayer bulletPlayer) {
-//        return (Enemy) this.list.stream().filter(gameObject -> gameObject.isAlive).filter(gameObject -> gameObject instanceof Enemy).filter(gameObject -> {
-//            BoxCollider other = ((Enemy) gameObject).boxCollider;
-//            return bulletPlayer.boxCollider.checkCollision(other);
-//        }).findFirst().orElse(null);
-//    }
+    public EnemyMatrix checkCollision2(BulletPlayer bulletPlayer) {
+        return (EnemyMatrix) this.list.stream().filter(gameObject -> gameObject.isAlive).filter(gameObject -> gameObject instanceof EnemyMatrix).filter(gameObject -> {
+            BoxCollider other = ((EnemyMatrix) gameObject).boxCollider;
+            return bulletPlayer.boxCollider.checkCollision(other);
+        }).findFirst().orElse(null);
+    }
 //    public boolean checkCollision3(BulletEnemy bulletEnemy){
 //        Player player = findPlayer();
 //        BoxCollider other = player.boxCollider;
