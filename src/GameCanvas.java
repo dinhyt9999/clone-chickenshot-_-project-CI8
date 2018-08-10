@@ -1,6 +1,7 @@
 import base.GameObjectManager;
 import game.background.Background;
 import game.enemy.enemymatrix.CreatEnemyMatrix;
+import game.enemy.enemytravel.CreatEnemyTravel;
 import game.player.Player;
 
 import javax.swing.*;
@@ -34,7 +35,7 @@ public class GameCanvas extends JPanel {
         GameObjectManager.instance.add(new Background());
         setupPlayer();
         GameObjectManager.instance.add(new CreatEnemyMatrix());
-//        GameObjectManager.instance.add(new CreatStar());
+        GameObjectManager.instance.add(new CreatEnemyTravel());
 //        GameObjectManager.instance.add(new CreatEnemy());
     }
 
