@@ -32,7 +32,6 @@ public class CreatEnemyTravel extends GameObject {
                         enemyTravel.velocity.set(2.5f,2.5f);
                         this.tempVelocity.set(enemyTravel.velocity);
                     }
-                    System.out.println(enemyTravel.position.y);
                     GameObjectManager.instance.add(enemyTravel);
                 }else{
                     EnemyTravel enemyTravel = new EnemyTravel();
