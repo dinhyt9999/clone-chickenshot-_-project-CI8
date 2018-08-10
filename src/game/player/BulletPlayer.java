@@ -4,6 +4,7 @@ import base.GameObject;
 import base.GameObjectManager;
 import base.Vector2D;
 import game.enemy.enemymatrix.EnemyMatrix;
+import game.enemy.enemytravel.EnemyTravel;
 import physic.BoxCollider;
 import renderer.OvalRenderer;
 
@@ -24,6 +25,11 @@ public class BulletPlayer extends GameObject {
         EnemyMatrix enemyMatrix = GameObjectManager.instance.checkCollision2(this);
         if(enemyMatrix != null){
             enemyMatrix.isAlive = false;
+            this.isAlive = false;
+        }
+        EnemyTravel enemyTravel = GameObjectManager.instance.checkCollision1(this);
+        if(enemyTravel != null){
+            enemyTravel.isAlive = false;
             this.isAlive = false;
         }
     }

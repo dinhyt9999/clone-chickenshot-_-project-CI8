@@ -1,6 +1,7 @@
 package base;
 
 import game.enemy.enemymatrix.EnemyMatrix;
+import game.enemy.enemytravel.EnemyTravel;
 import game.player.BulletPlayer;
 import game.player.Player;
 import physic.BoxCollider;
@@ -38,13 +39,13 @@ public class GameObjectManager {
         return (Player) this.list.stream().filter(gameObject -> gameObject instanceof Player).findFirst().orElse(null);
     }
 
-//    public EnemyFollow checkCollision1(BulletPlayer bulletPlayer) {
-//        return (EnemyFollow) this.list.stream().filter(gameObject -> gameObject.isAlive).filter(gameObject -> gameObject instanceof EnemyFollow).filter(gameObject -> {
-//            BoxCollider other = ((EnemyFollow) gameObject).boxCollider;
-//            return bulletPlayer.boxCollider.checkCollision(other);
-//        }).findFirst().orElse(null);
-//    }
-//
+    public EnemyTravel checkCollision1(BulletPlayer bulletPlayer) {
+        return (EnemyTravel) this.list.stream().filter(gameObject -> gameObject.isAlive).filter(gameObject -> gameObject instanceof EnemyTravel).filter(gameObject -> {
+            BoxCollider other = ((EnemyTravel) gameObject).boxCollider;
+            return bulletPlayer.boxCollider.checkCollision(other);
+        }).findFirst().orElse(null);
+    }
+
     public EnemyMatrix checkCollision2(BulletPlayer bulletPlayer) {
         return (EnemyMatrix) this.list.stream().filter(gameObject -> gameObject.isAlive).filter(gameObject -> gameObject instanceof EnemyMatrix).filter(gameObject -> {
             BoxCollider other = ((EnemyMatrix) gameObject).boxCollider;
