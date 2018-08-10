@@ -10,7 +10,7 @@ public class CreatEnemyMatrix extends GameObject {
     @Override
     public void run() {
         super.run();
-        if (this.frameCounter.compare(3000)) {
+        if (this.frameCounter.compare(400)) {
             for(i=0;i<=15;i++) {
                 EnemyMatrix enemyMatrix = new EnemyMatrix();
                 enemyMatrix.position.set((i%4)*25,(i/4)*25);
