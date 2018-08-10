@@ -3,6 +3,7 @@ package game.player;
 import base.GameObject;
 import base.Vector2D;
 import physic.BoxCollider;
+import renderer.ImageRenderer;
 import renderer.PolygonRenderer;
 
 import java.awt.*;
@@ -18,6 +19,7 @@ public class Player extends GameObject {
                 new Vector2D(8,0),
                 new Vector2D(0, 20),
                 new Vector2D(16, 20));
+   //     this.renderer=new ImageRenderer("image/NV 2.jpg",16,16);
         this.attributes.add(new PlayerShoot());
         this.attributes.add(new PlayerMove());
     }
