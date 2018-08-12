@@ -5,6 +5,9 @@ import base.GameObjectManager;
 import base.Vector2D;
 import physic.BoxCollider;
 import renderer.ImageRenderer;
+import renderer.OvalRenderer;
+
+import java.awt.*;
 
 public class BulletEnemy extends GameObject {
     public Vector2D velocity;
@@ -12,7 +15,7 @@ public class BulletEnemy extends GameObject {
     public BulletEnemy() {
         this.velocity = new Vector2D();
         this.boxCollider = new BoxCollider(5,5);
-        this.renderer = new ImageRenderer("resources-rocket-master/resources-rocket-master/resources/images/circle.png",5,5);
+        this.renderer = new OvalRenderer(Color.WHITE,5,5);
     }
 
     @Override
