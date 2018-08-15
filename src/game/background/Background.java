@@ -8,6 +8,7 @@ import java.awt.*;
 
 public class Background extends GameObject {
     public Background() {
-        this.renderer = new ImageRenderer("image/BG.png", 600, 1024);
+        //this.renderer = new ImageRenderer("image/BG.png", 1024, 600);
+        this.renderer = new RectRenderer(Color.BLACK,1024,600);
     }
 }

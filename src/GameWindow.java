@@ -9,7 +9,7 @@ public class GameWindow extends JFrame {
     private GameCanvas gameCanvas;
 
     public GameWindow() {
-        this.setSize(600, 1024);
+        this.setSize(1024, 600);
         setupGameCanvas();
         event();
         this.setVisible(true);
@@ -39,7 +39,7 @@ public class GameWindow extends JFrame {
     }
 
     public void gameLoop() {
-        while (true) {
+        while (this.gameCanvas.player.isAlive) {
             long currentTime = System.nanoTime();
             if (currentTime - this.lastTime >= 17_000_000) {
                 this.gameCanvas.runAll();

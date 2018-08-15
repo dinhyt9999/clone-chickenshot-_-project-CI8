@@ -9,7 +9,7 @@ public class PlayerMove implements Attribute<Player> {
         if (KeyboardEvent.instance.isA && gameObject.position.x>8) {
             gameObject.position.x-=3;
         }
-        if (KeyboardEvent.instance.isD && gameObject.position.x<1016) {
+        if (KeyboardEvent.instance.isD && gameObject.position.x<1010) {
             gameObject.position.x+=3;
         }
         if (KeyboardEvent.instance.isW && gameObject.position.y>10) {

@@ -3,13 +3,15 @@ package game.player;
 import base.GameObject;
 import base.Vector2D;
 import physic.BoxCollider;
+import physic.PhysicBody;
 import renderer.ImageRenderer;
 import renderer.PolygonRenderer;
 
 import java.awt.*;
 
-public class Player extends GameObject {
+public class Player extends GameObject implements PhysicBody {
     public Vector2D velocity;
+    public BoxCollider boxCollider;
     public int angle;
 
     public Player() {
@@ -30,4 +32,13 @@ public class Player extends GameObject {
         this.boxCollider.position.set(this.position.x - 10, this.position.y -8);
     }
 
+    @Override
+    public BoxCollider getBoxCollider() {
+        return this.boxCollider;
+    }
+
+    @Override
+    public void getHit(GameObject gameObject) {
+        this.isAlive = false;
+    }
 }
