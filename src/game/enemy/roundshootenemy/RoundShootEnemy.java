@@ -1,4 +1,4 @@
-package game.enemy.enemymatrix;
+package game.enemy.roundshootenemy;
 
 import base.GameObject;
 import base.Vector2D;
@@ -12,36 +12,27 @@ import renderer.OvalRenderer;
 
 import java.awt.*;
 
-public class EnemyMatrix extends GameObject implements PhysicBody, HitPoints {
+public class RoundShootEnemy extends GameObject implements PhysicBody, HitPoints {
     public Vector2D velocity;
-    public Vector2D temp;
+
     public BoxCollider boxCollider;
     private RunHitObject runHitObject;
     private int hitPoints;
 
-    public EnemyMatrix() {
-        this.hitPoints =3;
-        this.velocity = new Vector2D(2.5f, 0);
-        this.boxCollider = new BoxCollider(16, 16);
+    public RoundShootEnemy() {
+        this.hitPoints = 5;
+        this.velocity = new Vector2D();
         this.renderer = new OvalRenderer(Color.WHITE, 16, 16);
-        this.temp = new Vector2D(this.position.x, this.position.y);
-        this.attributes.add(new EnemyMatrixShoot());
-        this.attributes.add(new EnemyMatrixMove());
+        this.attributes.add(new RoundShootEnemyShoot());
+        this.boxCollider = new BoxCollider(16, 16);
         this.runHitObject = new RunHitObject(Player.class);
     }
 
     @Override
     public void run() {
         super.run();
-        this.position.addUp(velocity);
         this.boxCollider.position.set(this.position.x - 8, this.position.y - 8);
-        this.attributes.add(new EnemyMatrixMove());
         this.runHitObject.run(this);
-    }
-
-    @Override
-    public void render(Graphics graphics) {
-        super.render(graphics);
     }
 
     @Override
@@ -51,8 +42,8 @@ public class EnemyMatrix extends GameObject implements PhysicBody, HitPoints {
 
     @Override
     public void getHit(GameObject gameObject) {
-        getHitPoint(gameObject);
-        if(this.hitPoints==0)
+        this.getHitPoint(gameObject);
+        if(this.hitPoints == 0)
             this.isAlive = false;
     }
 
@@ -64,4 +55,3 @@ public class EnemyMatrix extends GameObject implements PhysicBody, HitPoints {
             this.hitPoints-=((BulletPlayer) gameObject).force;
     }
 }
-

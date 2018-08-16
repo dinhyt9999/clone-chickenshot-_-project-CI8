@@ -5,6 +5,7 @@ import base.GameObjectManager;
 import base.Vector2D;
 import game.enemy.enemymatrix.EnemyMatrix;
 import game.enemy.enemytravel.EnemyTravel;
+import game.enemy.roundshootenemy.RoundShootEnemy;
 import physic.BoxCollider;
 import physic.HitPoints;
 import physic.PhysicBody;
@@ -24,7 +25,7 @@ public class BulletPlayer extends GameObject implements PhysicBody, HitPoints {
         this.velocity = new Vector2D();
         this.renderer = new OvalRenderer(Color.RED,5,5);
         this.boxCollider = new BoxCollider(5,5);
-        this.runHitObject = new RunHitObject(EnemyMatrix.class, EnemyTravel.class);
+        this.runHitObject = new RunHitObject(EnemyMatrix.class, EnemyTravel.class, RoundShootEnemy.class);
     }
     @Override
     public void run() {

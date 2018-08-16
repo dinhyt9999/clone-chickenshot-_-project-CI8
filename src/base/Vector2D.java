@@ -78,7 +78,7 @@ public class Vector2D {
         return new Vector2D(this.x, this.y);
     }
 
-    public Vector2D rotate(float angle) {
+    public Vector2D rotate(double angle) {
         double radian = Math.toRadians(angle);
         float cos = (float) Math.cos(radian);
         float sin = (float) Math.sin(radian);

@@ -2,6 +2,7 @@ import base.GameObjectManager;
 import game.background.Background;
 import game.enemy.enemymatrix.CreatEnemyMatrix;
 import game.enemy.enemytravel.CreatEnemyTravel;
+import game.enemy.roundshootenemy.CreateRoundShootEnemy;
 import game.player.Player;
 
 import javax.swing.*;
@@ -35,7 +36,7 @@ public class GameCanvas extends JPanel {
         setupPlayer();
         GameObjectManager.instance.add(new CreatEnemyMatrix());
         GameObjectManager.instance.add(new CreatEnemyTravel());
-//        GameObjectManager.instance.add(new CreatEnemy());
+        GameObjectManager.instance.add(new CreateRoundShootEnemy());
     }
 
     private void setupBackBuffered() {

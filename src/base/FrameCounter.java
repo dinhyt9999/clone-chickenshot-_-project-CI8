@@ -2,19 +2,25 @@ package base;
 
 
 public class FrameCounter {
+    private int counter;
     private int timeInterval;
 
-    public FrameCounter() {
-        this.timeInterval = 60;
+    public FrameCounter(int timeInterval) {
+        this.counter = 0;
+        this.timeInterval = timeInterval;
     }
 
-    public boolean compare(int timeInterval){
-        if (this.timeInterval % timeInterval == 0)
+    public boolean checkCounter() {
+        if (this.counter == this.timeInterval) {
             return true;
-        else return false;
+        } else {
+            this.counter += 1;
+            return false;
+        }
     }
-    public void run() {
-        this.timeInterval = (this.timeInterval+1)%10000;
+
+    public void resetCount() {
+        this.counter = 0;
     }
 }
 

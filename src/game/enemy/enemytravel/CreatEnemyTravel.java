@@ -10,16 +10,14 @@ import java.util.Random;
 public class CreatEnemyTravel extends GameObject {
     private int i;
     private Random random = new Random();
-//    private Vector2D tempPosition = new Vector2D();
     private Vector2D tempPosition = new Vector2D().set(random.nextInt(2)*600,random.nextInt(100));
     private Vector2D tempVelocity = new Vector2D();
-    private FrameCounter frameCounter = new FrameCounter();
+    private FrameCounter frameCounter = new FrameCounter(400);
 
     @Override
     public void run() {
-        // Initialise value của tempPos vs tempVel trên Attribute luôn không cần phải tạo riêng 1 con enemyTravel đi đàu nữa
         super.run();
-        if (this.frameCounter.compare(400)) {
+        if (this.frameCounter.checkCounter()) {
             if(this.tempPosition.x == 600){
                 this.tempVelocity.set(-5f,2.5f);
             }else{
@@ -31,7 +29,7 @@ public class CreatEnemyTravel extends GameObject {
                 enemyTravel.velocity.set(this.tempVelocity);
                 GameObjectManager.instance.add(enemyTravel);
             }
+            this.frameCounter.resetCount();
         }
-        this.frameCounter.run();
     }
 }

@@ -10,18 +10,18 @@ import java.util.List;
 import java.util.Random;
 
 public class EnemyMatrixShoot implements Attribute<EnemyMatrix> {
-    private FrameCounter frameCounter = new FrameCounter();
     private Random random = new Random();
+    private FrameCounter frameCounter = new FrameCounter(160 + random.nextInt(150));
 
     @Override
     public void run(EnemyMatrix enemyMatrix) {
-        if (this.frameCounter.compare(160 + random.nextInt(150))) {
+        if (this.frameCounter.checkCounter()) {
             BulletEnemy bulletEnemy = new BulletEnemy();
             bulletEnemy.position.set(enemyMatrix.position);
             bulletEnemy.velocity.set(0, random.nextInt(2)+1);
             GameObjectManager.instance.add(bulletEnemy);
+            this.frameCounter.resetCount();
         }
-        this.frameCounter.run();
     }
 }
 
