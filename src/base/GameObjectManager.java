@@ -1,8 +1,5 @@
 package base;
 
-import game.enemy.enemymatrix.EnemyMatrix;
-import game.enemy.enemytravel.EnemyTravel;
-import game.player.BulletPlayer;
 import game.player.Player;
 import physic.BoxCollider;
 import physic.PhysicBody;
@@ -33,11 +30,16 @@ public class GameObjectManager {
     }
 
     public void renderAll(Graphics graphics) {
-        this.list.stream().filter(gameObject -> gameObject.isAlive).forEach(gameObject -> gameObject.render(graphics));
+        this.list.stream()
+                .filter(gameObject -> gameObject.isAlive)
+                .forEach(gameObject -> gameObject.render(graphics));
     }
 
     public Player findPlayer() {
-        return (Player) this.list.stream().filter(gameObject -> gameObject instanceof Player).findFirst().orElse(null);
+        return (Player) this.list
+                .stream()
+                .filter(gameObject -> gameObject instanceof Player)
+                .findFirst().orElse(null);
     }
 
     public <T extends GameObject & PhysicBody> T checkCollision(BoxCollider boxCollider, Class<T> cls) {

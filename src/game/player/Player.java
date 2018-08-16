@@ -2,19 +2,25 @@ package game.player;
 
 import base.GameObject;
 import base.Vector2D;
+import game.enemy.BulletEnemy;
+import game.enemy.enemymatrix.EnemyMatrix;
+import game.enemy.enemytravel.EnemyTravel;
 import physic.BoxCollider;
+import physic.HitPoints;
 import physic.PhysicBody;
 import renderer.ImageRenderer;
 import renderer.PolygonRenderer;
 
 import java.awt.*;
 
-public class Player extends GameObject implements PhysicBody {
+public class Player extends GameObject implements PhysicBody, HitPoints {
     public Vector2D velocity;
     public BoxCollider boxCollider;
     public int angle;
+    private int hitPoints;
 
     public Player() {
+        this.hitPoints = 20;
         this.velocity = new Vector2D();
         this.boxCollider = new BoxCollider(16, 20);
         this.renderer = new PolygonRenderer(Color.RED,
@@ -39,6 +45,18 @@ public class Player extends GameObject implements PhysicBody {
 
     @Override
     public void getHit(GameObject gameObject) {
-        this.isAlive = false;
+        getHitPoint(gameObject);
+        if(this.hitPoints <=0)
+            this.isAlive = false;
+    }
+
+    @Override
+    public void getHitPoint(GameObject gameObject) {
+        if(gameObject instanceof EnemyMatrix)
+            this.hitPoints-=3;
+        if(gameObject instanceof EnemyTravel)
+            this.hitPoints-=3;
+        if(gameObject instanceof BulletEnemy)
+            this.hitPoints--;
     }
 }
