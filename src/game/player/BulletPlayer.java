@@ -1,9 +1,9 @@
 package game.player;
 
 import base.GameObject;
-import base.GameObjectManager;
 import base.Vector2D;
-import game.enemy.Meteor.Meteor;
+import game.enemy.enemybehind.EnemyBehind;
+import game.enemy.meteor.Meteor;
 import game.enemy.enemymatrix.EnemyMatrix;
 import game.enemy.enemytravel.EnemyTravel;
 import game.enemy.growupenemy.EnemyGrowUp;
@@ -14,7 +14,6 @@ import physic.PhysicBody;
 import physic.RunHitObject;
 import renderer.OvalRenderer;
 
-import javax.swing.text.html.HTMLDocument;
 import java.awt.*;
 
 public class BulletPlayer extends GameObject implements PhysicBody, HitPoints {
@@ -32,7 +31,9 @@ public class BulletPlayer extends GameObject implements PhysicBody, HitPoints {
                 EnemyTravel.class,
                 RoundShootEnemy.class,
                 EnemyGrowUp.class,
-                Meteor.class);
+                Meteor.class,
+                EnemyBehind.class
+        );
     }
 
     @Override

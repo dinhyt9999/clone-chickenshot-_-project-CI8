@@ -1,4 +1,4 @@
-package game.enemy.Meteor;
+package game.enemy.meteor;
 
 import base.FrameCounter;
 import base.GameObject;

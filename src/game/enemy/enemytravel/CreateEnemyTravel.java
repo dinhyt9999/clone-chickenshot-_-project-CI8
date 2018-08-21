@@ -7,7 +7,7 @@ import base.Vector2D;
 
 import java.util.Random;
 
-public class CreatEnemyTravel extends GameObject {
+public class CreateEnemyTravel extends GameObject {
     private int i;
     private Random random = new Random();
     private Vector2D tempPosition = new Vector2D().set(random.nextInt(2)*600,random.nextInt(100));

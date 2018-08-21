@@ -1,10 +1,12 @@
+import base.GameObject;
 import base.GameObjectManager;
 import game.background.Background;
-import game.enemy.enemymatrix.CreatEnemyMatrix;
-import game.enemy.enemytravel.CreatEnemyTravel;
+import game.enemy.enemybehind.CreateEnemyBehind;
+import game.enemy.enemymatrix.CreateEnemyMatrix;
+import game.enemy.enemytravel.CreateEnemyTravel;
 import game.enemy.growupenemy.CreateEnemyGrowUp;
 import game.enemy.roundshootenemy.CreateRoundShootEnemy;
-import game.enemy.Meteor.CreateMeteor;
+import game.enemy.meteor.CreateMeteor;
 import game.player.Player;
 
 import javax.swing.*;
@@ -36,11 +38,12 @@ public class GameCanvas extends JPanel {
     private void setupCharacter() {
         GameObjectManager.instance.add(new Background());
         setupPlayer();
-        GameObjectManager.instance.add(new CreatEnemyMatrix());
-        GameObjectManager.instance.add(new CreatEnemyTravel());
+        GameObjectManager.instance.add(new CreateEnemyMatrix());
+        GameObjectManager.instance.add(new CreateEnemyTravel());
         GameObjectManager.instance.add(new CreateEnemyGrowUp());
         GameObjectManager.instance.add(new CreateRoundShootEnemy());
         GameObjectManager.instance.add(new CreateMeteor());
+        GameObjectManager.instance.add(new CreateEnemyBehind());
     }
 
     private void setupBackBuffered() {

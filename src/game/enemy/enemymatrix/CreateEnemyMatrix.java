@@ -4,7 +4,7 @@ import base.FrameCounter;
 import base.GameObject;
 import base.GameObjectManager;
 
-public class CreatEnemyMatrix extends GameObject {
+public class CreateEnemyMatrix extends GameObject {
     private int i;
     private FrameCounter frameCounter = new FrameCounter(400);
     @Override
