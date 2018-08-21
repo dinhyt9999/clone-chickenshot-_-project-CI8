@@ -32,7 +32,6 @@ public class EnemyTravel extends GameObject implements PhysicBody, HitPoints {
         this.position.addUp(velocity);
         this.boxCollider.position.set(this.position.x - 8,this.position.y - 8);
         this.runHitObject.run(this);
-
     }
     @Override
     public void render(Graphics graphics) {

@@ -19,4 +19,8 @@ public class BoxCollider {
         Rectangle r2 = new Rectangle((int)other.position.x,(int) other.position.y,other.width,other.height);
         return r1.intersects(r2);
     }
+    public void set(int width, int heigh){
+        this.width=width;
+        this.height=heigh;
+    }
 }
