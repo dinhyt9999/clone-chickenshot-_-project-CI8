@@ -4,6 +4,7 @@ import game.enemy.enemymatrix.CreatEnemyMatrix;
 import game.enemy.enemytravel.CreatEnemyTravel;
 import game.enemy.growupenemy.CreateEnemyGrowUp;
 import game.enemy.roundshootenemy.CreateRoundShootEnemy;
+import game.enemy.Meteor.CreateMeteor;
 import game.player.Player;
 
 import javax.swing.*;
@@ -39,6 +40,7 @@ public class GameCanvas extends JPanel {
         GameObjectManager.instance.add(new CreatEnemyTravel());
         GameObjectManager.instance.add(new CreateEnemyGrowUp());
         GameObjectManager.instance.add(new CreateRoundShootEnemy());
+        GameObjectManager.instance.add(new CreateMeteor());
     }
 
     private void setupBackBuffered() {

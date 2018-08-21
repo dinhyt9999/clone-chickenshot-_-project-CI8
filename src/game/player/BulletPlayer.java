@@ -3,6 +3,7 @@ package game.player;
 import base.GameObject;
 import base.GameObjectManager;
 import base.Vector2D;
+import game.enemy.Meteor.Meteor;
 import game.enemy.enemymatrix.EnemyMatrix;
 import game.enemy.enemytravel.EnemyTravel;
 import game.enemy.growupenemy.EnemyGrowUp;
@@ -26,8 +27,14 @@ public class BulletPlayer extends GameObject implements PhysicBody, HitPoints {
         this.velocity = new Vector2D();
         this.renderer = new OvalRenderer(Color.RED,5,5);
         this.boxCollider = new BoxCollider(5,5);
-        this.runHitObject = new RunHitObject(EnemyMatrix.class, EnemyTravel.class, RoundShootEnemy.class, EnemyGrowUp.class);
+        this.runHitObject = new RunHitObject(
+                EnemyMatrix.class,
+                EnemyTravel.class,
+                RoundShootEnemy.class,
+                EnemyGrowUp.class,
+                Meteor.class);
     }
+
     @Override
     public void run() {
         super.run();
