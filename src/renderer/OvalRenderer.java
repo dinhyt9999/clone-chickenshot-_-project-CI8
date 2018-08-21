@@ -5,8 +5,8 @@ import base.Vector2D;
 import java.awt.*;
 
 public class OvalRenderer implements Renderer {
-    private int width;
-    private int height;
+    public int width;
+    public int height;
     private Color color;
 
     public OvalRenderer(Color color, int width, int height) {

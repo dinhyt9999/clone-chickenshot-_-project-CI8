@@ -15,21 +15,24 @@ import java.awt.*;
 import java.util.Random;
 
 public class EnemyGrowUp extends GameObject implements PhysicBody, HitPoints {
-    public BoxCollider boxCollider;
     public Vector2D velocity;
+
+    public int width = 10;
+    public int height = 10;
+
+    public BoxCollider boxCollider;
     private RunHitObject runHitObject;
+
     private int hitPoints;
-    public int width;
-    public int height;
+
     public EnemyGrowUp() {
             Random random=new Random();
             this.hitPoints = 3;
             this.velocity = new Vector2D(random.nextInt(8),random.nextInt(8));
-            this.boxCollider = new BoxCollider(16,16);
-            this.renderer = new OvalRenderer(Color.WHITE, 10, 10);
-            this.height=16;
-            this.width=16;
+            this.boxCollider = new BoxCollider(10,10);
+            this.renderer = new OvalRenderer(Color.WHITE, this.width, this.height);
             this.attributes.add(new EnemyGrowUpGrow());
+            this.attributes.add(new EnemyGrowUpMove());
             this.runHitObject = new RunHitObject(Player.class);
     }
 
@@ -37,24 +40,15 @@ public class EnemyGrowUp extends GameObject implements PhysicBody, HitPoints {
     public void run() {
         super.run();
         this.position.addUp(velocity);
-        this.reflexScreen();
+        ((OvalRenderer)this.renderer).width = this.width;
+        ((OvalRenderer)this.renderer).height = this.height;
         this.boxCollider.position.set(this.position.x - 8,this.position.y - 8);
         this.runHitObject.run(this);
-    }
-
-    private void reflexScreen(){
-        if(this.position.y<0||this.position.y>590){
-            this.velocity.y=-this.velocity.y;
-        }
-        if(this.position.x<0||this.position.x>1001){
-            this.velocity.x=-this.velocity.x;
-        }
     }
 
     @Override
     public void render(Graphics graphics) {
         super.render(graphics);
-        this.renderer=new OvalRenderer(Color.white,this.width,this.height);
     }
 
     @Override
@@ -76,6 +70,4 @@ public class EnemyGrowUp extends GameObject implements PhysicBody, HitPoints {
         if(gameObject instanceof BulletPlayer)
             this.hitPoints-=((BulletPlayer) gameObject).force;
     }
-
-
 }

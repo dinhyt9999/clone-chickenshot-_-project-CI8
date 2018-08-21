@@ -22,6 +22,7 @@ public class GameObject{
     public void run() {
         this.attributes.forEach(attribute -> attribute.run(this));
     }
+
     public void render(Graphics graphics) {
         if (this.renderer != null)
             this.renderer.render(graphics, this.position);

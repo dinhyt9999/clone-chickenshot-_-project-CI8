@@ -26,6 +26,7 @@ public class EnemyTravel extends GameObject implements PhysicBody, HitPoints {
         this.attributes.add(new EnemyTravelShoot());
         this.runHitObject = new RunHitObject(Player.class);
     }
+
     @Override
     public void run() {
         super.run();

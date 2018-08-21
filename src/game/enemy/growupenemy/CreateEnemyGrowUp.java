@@ -8,12 +8,9 @@ import java.util.Random;
 
 public class CreateEnemyGrowUp extends GameObject {
 
-    private Random random;
-    private FrameCounter frameCounter;
-    public CreateEnemyGrowUp(){
-        random=new Random();
-        frameCounter=new FrameCounter(100);
-    }
+    private Random random = new Random();
+    private FrameCounter frameCounter = new FrameCounter(500);
+
     public void run(){
         super.run();
         if (this.frameCounter.checkCounter()) {

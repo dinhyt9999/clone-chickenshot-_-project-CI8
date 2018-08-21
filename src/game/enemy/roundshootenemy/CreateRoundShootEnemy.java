@@ -12,6 +12,7 @@ public class CreateRoundShootEnemy extends GameObject {
 
     @Override
     public void run() {
+        super.run();
         if (this.frameCounter.checkCounter()) {
             RoundShootEnemy enemy = new RoundShootEnemy();
             enemy.position.set(random.nextInt(1024), random.nextInt(300));
