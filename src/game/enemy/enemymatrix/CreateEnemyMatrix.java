@@ -12,9 +12,8 @@ public class CreateEnemyMatrix extends GameObject {
         super.run();
         if (this.frameCounter.checkCounter()) {
             for(i=0;i<=15;i++) {
-                EnemyMatrix enemyMatrix = new EnemyMatrix();
+                EnemyMatrix enemyMatrix = GameObjectManager.instance.recycle(EnemyMatrix.class);
                 enemyMatrix.position.set((i%4)*25,(i/4)*25);
-                GameObjectManager.instance.add(enemyMatrix);
             }
             this.frameCounter.resetCount();
         }

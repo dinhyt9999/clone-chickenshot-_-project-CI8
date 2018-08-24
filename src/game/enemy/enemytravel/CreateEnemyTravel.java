@@ -24,10 +24,9 @@ public class CreateEnemyTravel extends GameObject {
                 this.tempVelocity.set(5f,2.5f);
             }
             for (i = 0; i <= 9; i++) {
-                EnemyTravel enemyTravel = new EnemyTravel();
+                EnemyTravel enemyTravel = GameObjectManager.instance.recycle(EnemyTravel.class);
                 enemyTravel.position.set(this.tempPosition.x - this.tempVelocity.x*i*10,this.tempPosition.y - this.tempVelocity.y*i*10);
                 enemyTravel.velocity.set(this.tempVelocity);
-                GameObjectManager.instance.add(enemyTravel);
             }
             this.frameCounter.resetCount();
         }

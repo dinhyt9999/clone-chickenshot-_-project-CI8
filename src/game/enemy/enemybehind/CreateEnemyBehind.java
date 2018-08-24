@@ -16,29 +16,25 @@ public class CreateEnemyBehind extends GameObject {
         super.run();
         if (this.frameCounter.checkCounter()) {
             for (int i=0; i<9; i++) {
-                EnemyBehind enemyBehind1 = new EnemyBehind();
-                enemyBehind1.position.set(this.positionLeft.x, this.positionLeft.y+i*30);
-                enemyBehind1.velocity.set(0, -5);
-                GameObjectManager.instance.add(enemyBehind1);
+                EnemyBehind enemyBehindLeft1 = GameObjectManager.instance.recycle(EnemyBehind.class);
+                enemyBehindLeft1.position.set(this.positionLeft.x, this.positionLeft.y+i*30);
+                enemyBehindLeft1.velocity.set(0, -5);
 
-                EnemyBehind enemyBehind2 = new EnemyBehind();
-                enemyBehind2.position.set(this.positionLeft.x + 40, this.positionLeft.y+i*30);
-                enemyBehind2.velocity.set(0, -5);
-                enemyBehind2.upDown = 0;
-                GameObjectManager.instance.add(enemyBehind2);
+                EnemyBehind enemyBehindLeft2 = GameObjectManager.instance.recycle(EnemyBehind.class);
+                enemyBehindLeft2.position.set(this.positionLeft.x + 40, this.positionLeft.y+i*30);
+                enemyBehindLeft2.velocity.set(0, -5);
+                enemyBehindLeft2.upDown = 0;
 
-                EnemyBehind enemyBehind3 = new EnemyBehind();
-                enemyBehind3.position.set(this.positionRight.x - 40, this.positionRight.y+i*30);
-                enemyBehind3.velocity.set(0, -5);
-                enemyBehind3.upDown = 0;
-                enemyBehind3.leftRight = 0;
-                GameObjectManager.instance.add(enemyBehind3);
+                EnemyBehind enemyBehindRight1 = GameObjectManager.instance.recycle(EnemyBehind.class);
+                enemyBehindRight1.position.set(this.positionRight.x - 40, this.positionRight.y+i*30);
+                enemyBehindRight1.velocity.set(0, -5);
+                enemyBehindRight1.upDown = 0;
+                enemyBehindRight1.leftRight = 0;
 
-                EnemyBehind enemyBehind4 = new EnemyBehind();
-                enemyBehind4.position.set(this.positionRight.x, this.positionRight.y+i*30);
-                enemyBehind4.velocity.set(0, -5);
-                enemyBehind4.leftRight = 0;
-                GameObjectManager.instance.add(enemyBehind4);
+                EnemyBehind enemyBehindRight2 = GameObjectManager.instance.recycle(EnemyBehind.class);
+                enemyBehindRight2.position.set(this.positionRight.x, this.positionRight.y+i*30);
+                enemyBehindRight2.velocity.set(0, -5);
+                enemyBehindRight2.leftRight = 0;
             }
             this.frameCounter.resetCount();
         }

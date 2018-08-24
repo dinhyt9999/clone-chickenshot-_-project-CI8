@@ -1,14 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="850e99c9-c3b9-432c-8c9a-bdc5ccaea630" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/renderer/AnimationRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/Utils.java" afterDir="false" />
+    <list default="true" id="e4a7fbe1-60cb-4fc5-ab30-c8775e453093" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/ImageRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/ImageRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempchick/GameCanvas.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempchick/GameWindow$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempchick/GameWindow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempchick/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempchick/base/Attribute.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempchick/base/FrameCounter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempchick/base/GameObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempchick/base/GameObjectManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempchick/base/Vector2D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempchick/game/background/Background.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempchick/game/enemy/BulletEnemy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempchick/game/enemy/enemymatrix/CreatEnemyMatrix.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempchick/game/enemy/enemymatrix/EnemyMatrix.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempchick/game/enemy/enemymatrix/EnemyMatrixMove.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempchick/game/enemy/enemymatrix/EnemyMatrixShoot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempchick/game/enemy/enemytravel/CreatEnemyTravel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempchick/game/enemy/enemytravel/EnemyTravel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempchick/game/enemy/enemytravel/EnemyTravelShoot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempchick/game/enemy/growupenemy/CreateEnemyGrowUp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempchick/game/enemy/growupenemy/EnemyGrowUp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempchick/game/enemy/growupenemy/EnemyGrowUpGrow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempchick/game/enemy/roundshootenemy/CreateRoundShootEnemy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempchick/game/enemy/roundshootenemy/RoundShootEnemy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempchick/game/enemy/roundshootenemy/RoundShootEnemyShoot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempchick/game/player/BulletPlayer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempchick/game/player/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempchick/game/player/PlayerMove.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempchick/game/player/PlayerShoot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempchick/input/KeyboardEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempchick/physic/BoxCollider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempchick/physic/HitPoints.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempchick/physic/PhysicBody.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempchick/physic/RunHitObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempchick/renderer/ImageRenderer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempchick/renderer/OvalRenderer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempchick/renderer/PolygonRenderer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempchick/renderer/RectRenderer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempchick/renderer/Renderer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/GameObjectManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/GameObjectManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/enemy/enemybehind/CreateEnemyBehind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/enemy/enemybehind/CreateEnemyBehind.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/enemy/enemymatrix/CreateEnemyMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/enemy/enemymatrix/CreateEnemyMatrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/enemy/enemymatrix/EnemyMatrixShoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/enemy/enemymatrix/EnemyMatrixShoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/enemy/enemytravel/CreateEnemyTravel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/enemy/enemytravel/CreateEnemyTravel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/enemy/enemytravel/EnemyTravelShoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/enemy/enemytravel/EnemyTravelShoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/enemy/growupenemy/CreateEnemyGrowUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/enemy/growupenemy/CreateEnemyGrowUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/enemy/meteor/CreateMeteor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/enemy/meteor/CreateMeteor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/enemy/roundshootenemy/CreateRoundShootEnemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/enemy/roundshootenemy/CreateRoundShootEnemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/enemy/roundshootenemy/RoundShootEnemyShoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/enemy/roundshootenemy/RoundShootEnemyShoot.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,50 +73,43 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Utils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utils/Utils.java">
+      <file leaf-file-name="CreateMeteor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/enemy/meteor/CreateMeteor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="272">
+              <caret line="20" column="78" selection-start-line="20" selection-start-column="78" selection-end-line="20" selection-end-column="78" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AnimationRenderer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/renderer/AnimationRenderer.java">
+      <file leaf-file-name="CreateRoundShootEnemy.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/enemy/roundshootenemy/CreateRoundShootEnemy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="52" column="44" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="238">
+              <caret line="18" column="55" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageRenderer.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/renderer/ImageRenderer.java">
+      <file leaf-file-name="EnemyTravelShoot.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/game/enemy/enemytravel/EnemyTravelShoot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="221">
+              <caret line="18" column="61" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Background.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/background/Background.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -80,23 +117,30 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/utils/Utils.java" />
-        <option value="$PROJECT_DIR$/src/renderer/AnimationRenderer.java" />
-        <option value="$PROJECT_DIR$/src/renderer/ImageRenderer.java" />
+        <option value="$PROJECT_DIR$/src/base/GameObjectManager.java" />
+        <option value="$PROJECT_DIR$/src/game/enemy/enemymatrix/CreateEnemyMatrix.java" />
+        <option value="$PROJECT_DIR$/src/game/enemy/enemybehind/CreateEnemyBehind.java" />
+        <option value="$PROJECT_DIR$/src/game/enemy/enemytravel/CreateEnemyTravel.java" />
+        <option value="$PROJECT_DIR$/src/game/enemy/growupenemy/CreateEnemyGrowUp.java" />
+        <option value="$PROJECT_DIR$/src/game/enemy/meteor/CreateMeteor.java" />
+        <option value="$PROJECT_DIR$/src/game/enemy/roundshootenemy/CreateRoundShootEnemy.java" />
+        <option value="$PROJECT_DIR$/src/game/enemy/roundshootenemy/RoundShootEnemyShoot.java" />
+        <option value="$PROJECT_DIR$/src/game/enemy/enemytravel/EnemyTravelShoot.java" />
+        <option value="$PROJECT_DIR$/src/game/enemy/enemymatrix/EnemyMatrixShoot.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="16" />
-    <option name="y" value="34" />
-    <option name="width" value="1280" />
-    <option name="height" value="706" />
+    <option name="x" value="-7" />
+    <option name="width" value="697" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
@@ -115,52 +159,33 @@
               <item name="clone-chickenshot-_-project-CI8" type="b2602c69:ProjectViewProjectNode" />
               <item name="clone-chickenshot-_-project-CI8" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="clone-chickenshot-_-project-CI8" type="b2602c69:ProjectViewProjectNode" />
               <item name="clone-chickenshot-_-project-CI8" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="game" type="462c0819:PsiDirectoryNode" />
-              <item name="background" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="clone-chickenshot-_-project-CI8" type="b2602c69:ProjectViewProjectNode" />
               <item name="clone-chickenshot-_-project-CI8" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="game" type="462c0819:PsiDirectoryNode" />
-              <item name="player" type="462c0819:PsiDirectoryNode" />
+              <item name="enemy" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="clone-chickenshot-_-project-CI8" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clone-chickenshot-_-project-CI8" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="input" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="clone-chickenshot-_-project-CI8" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clone-chickenshot-_-project-CI8" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="physic" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="clone-chickenshot-_-project-CI8" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clone-chickenshot-_-project-CI8" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="renderer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="clone-chickenshot-_-project-CI8" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clone-chickenshot-_-project-CI8" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Final Project" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -175,7 +200,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="clone-chickenshot-_-project-CI8" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -221,17 +246,22 @@
       <properties />
       <listeners />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="850e99c9-c3b9-432c-8c9a-bdc5ccaea630" name="Default" comment="" />
-      <created>1534859038704</created>
+      <changelist id="e4a7fbe1-60cb-4fc5-ab30-c8775e453093" name="Default" comment="" />
+      <created>1535089326433</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1534859038704</updated>
+      <updated>1535089326433</updated>
     </task>
     <servers />
   </component>
@@ -241,24 +271,24 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32913387" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32913387" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32861635" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2306003" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24963397" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -278,13 +308,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils.java">
+    <entry file="file://$PROJECT_DIR$/src/base/GameObjectManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="18" selection-start-column="18" selection-end-column="18" />
+        <state relative-caret-position="68">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/renderer/AnimationRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/enemy/enemymatrix/CreateEnemyMatrix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="60" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameCanvas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-170">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/background/Background.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/base/GameObjectManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="75" column="5" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/enemy/enemybehind/CreateEnemyBehind.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/enemy/enemytravel/CreateEnemyTravel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="28" column="60" selection-start-line="28" selection-start-column="60" selection-end-line="28" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/enemy/growupenemy/CreateEnemyGrowUp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="18" column="93" selection-start-line="18" selection-start-column="93" selection-end-line="18" selection-end-column="93" />
         </state>
       </provider>
     </entry>
@@ -295,33 +388,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/renderer/AnimationRenderer.java">
+    <entry file="file://$PROJECT_DIR$/src/game/enemy/meteor/CreateMeteor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="52" column="44" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="272">
+          <caret line="20" column="78" selection-start-line="20" selection-start-column="78" selection-end-line="20" selection-end-column="78" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/Utils.java">
+    <entry file="file://$PROJECT_DIR$/src/game/enemy/roundshootenemy/CreateRoundShootEnemy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="238">
+          <caret line="18" column="55" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/renderer/ImageRenderer.java">
+    <entry file="file://$PROJECT_DIR$/src/game/enemy/roundshootenemy/RoundShootEnemyShoot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="221">
+          <caret line="17" column="75" selection-start-line="17" selection-start-column="75" selection-end-line="17" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/enemy/BulletEnemy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-34">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/enemy/enemymatrix/EnemyMatrixShoot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="20" column="61" selection-start-line="20" selection-start-column="61" selection-end-line="20" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/enemy/enemytravel/EnemyTravelShoot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="18" column="61" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
         </state>
       </provider>
     </entry>
@@ -330,7 +435,7 @@
     <states>
       <state key="ProjectJDKs.UI">
         <settings>
-          <last-edited>10</last-edited>
+          <last-edited>9</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

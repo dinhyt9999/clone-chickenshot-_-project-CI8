@@ -16,10 +16,9 @@ public class EnemyMatrixShoot implements Attribute<EnemyMatrix> {
     @Override
     public void run(EnemyMatrix enemyMatrix) {
         if (this.frameCounter.checkCounter()) {
-            BulletEnemy bulletEnemy = new BulletEnemy();
+            BulletEnemy bulletEnemy = GameObjectManager.instance.recycle(BulletEnemy.class);
             bulletEnemy.position.set(enemyMatrix.position);
             bulletEnemy.velocity.set(0, random.nextInt(2)+1);
-            GameObjectManager.instance.add(bulletEnemy);
             this.frameCounter.resetCount();
         }
     }

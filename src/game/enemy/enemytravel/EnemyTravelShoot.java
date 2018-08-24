@@ -14,10 +14,9 @@ public class EnemyTravelShoot implements Attribute<EnemyTravel>{
     @Override
     public void run(EnemyTravel enemyTravel) {
         if (this.frameCounter.checkCounter()) {
-            BulletEnemy bulletEnemy = new BulletEnemy();
+            BulletEnemy bulletEnemy = GameObjectManager.instance.recycle(BulletEnemy.class);
             bulletEnemy.position.set(enemyTravel.position);
             bulletEnemy.velocity.set(0, random.nextInt(3)+1);
-            GameObjectManager.instance.add(bulletEnemy);
             this.frameCounter.resetCount();
         }
     }

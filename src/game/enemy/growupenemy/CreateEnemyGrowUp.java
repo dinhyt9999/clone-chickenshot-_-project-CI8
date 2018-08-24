@@ -14,10 +14,9 @@ public class CreateEnemyGrowUp extends GameObject {
     public void run(){
         super.run();
         if (this.frameCounter.checkCounter()) {
-            EnemyGrowUp enemyGrowUp = new EnemyGrowUp();
+            EnemyGrowUp enemyGrowUp = GameObjectManager.instance.recycle(EnemyGrowUp.class);
             enemyGrowUp.position.set(this.random.nextInt(1024), 0);
             enemyGrowUp.velocity.set(this.random.nextInt(3) + 1, this.random.nextInt(3) + 1);
-            GameObjectManager.instance.add(enemyGrowUp);
             this.frameCounter.resetCount();
         }
 
