@@ -2,6 +2,8 @@ package game.player;
 
 import base.GameObject;
 import base.Vector2D;
+import game.enemy.MissileEnemy;
+import game.enemy.boss.Boss;
 import game.enemy.enemybehind.EnemyBehind;
 import game.enemy.meteor.Meteor;
 import game.enemy.enemymatrix.EnemyMatrix;
@@ -32,7 +34,9 @@ public class BulletPlayer extends GameObject implements PhysicBody, HitPoints {
                 RoundShootEnemy.class,
                 EnemyGrowUp.class,
                 Meteor.class,
-                EnemyBehind.class
+                EnemyBehind.class,
+                Boss.class,
+                MissileEnemy.class
         );
     }
 

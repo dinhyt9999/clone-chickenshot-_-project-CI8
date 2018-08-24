@@ -7,21 +7,20 @@ import game.player.Player;
 import physic.BoxCollider;
 import physic.PhysicBody;
 import physic.RunHitObject;
-import renderer.ImageRenderer;
 import renderer.OvalRenderer;
 
 import java.awt.*;
 
-public class BulletEnemy extends GameObject implements PhysicBody {
+public class MissileEnemy extends GameObject implements PhysicBody {
 
     public Vector2D velocity;
     public BoxCollider boxCollider;
     private RunHitObject runHitObject;
 
-    public BulletEnemy() {
+    public MissileEnemy() {
         this.velocity = new Vector2D();
-        this.boxCollider = new BoxCollider(5,5);
-        this.renderer = new OvalRenderer(Color.WHITE,5,5);
+        this.boxCollider = new BoxCollider(10,15);
+        this.renderer = new OvalRenderer(Color.WHITE,10,15);
         this.runHitObject = new RunHitObject(Player.class);
     }
 
@@ -29,8 +28,18 @@ public class BulletEnemy extends GameObject implements PhysicBody {
     public void run() {
         super.run();
         this.position.addUp(this.velocity);
-        this.boxCollider.position.set(this.position.x -2.5f,this.position.y-2.5f);
+        this.boxCollider.position.set(this.position.x-5f, this.position.y-7.5f);
+
+        Player player = GameObjectManager.instance.findPlayer();
+        this.update(player.position);
+
         this.runHitObject.run(this);
+    }
+
+    private void update(Vector2D position) {
+        this.velocity.set(
+                position.subtract(this.position).normalize()
+        ).multiply(1.5f);
     }
 
     @Override
