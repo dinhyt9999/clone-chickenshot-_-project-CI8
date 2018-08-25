@@ -20,7 +20,7 @@ public class EnemyMatrix extends GameObject implements PhysicBody, HitPoints {
     private int hitPoints;
 
     public EnemyMatrix() {
-        this.hitPoints =3;
+        this.hitPoints = 1;
         this.velocity = new Vector2D(2.5f, 0);
         this.boxCollider = new BoxCollider(16, 16);
         this.renderer = new OvalRenderer(Color.WHITE, 16, 16);
@@ -62,8 +62,12 @@ public class EnemyMatrix extends GameObject implements PhysicBody, HitPoints {
     public void getHitPoint(GameObject gameObject) {
         if(gameObject instanceof Player)
             this.hitPoints=0;
-        if(gameObject instanceof BulletPlayer)
-            this.hitPoints-=((BulletPlayer) gameObject).force;
+        if(gameObject instanceof BulletPlayer) {
+            this.hitPoints=0;
+//            this.hitPoints-=((BulletPlayer) gameObject).force;
+        }
+
+
     }
 }
 

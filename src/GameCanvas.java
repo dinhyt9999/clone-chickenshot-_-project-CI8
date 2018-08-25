@@ -2,7 +2,7 @@ import base.GameObjectManager;
 import game.background.Background;
 import game.enemy.boss.Boss;
 import game.enemy.enemybehind.CreateEnemyBehind;
-import game.enemy.enemymatrix.CreateEnemyMatrix;
+import game.enemy.enemymatrix.CreateMatrix;
 import game.enemy.enemytravel.CreateEnemyTravel;
 import game.enemy.growupenemy.CreateEnemyGrowUp;
 import game.enemy.roundshootenemy.CreateRoundShootEnemy;
@@ -46,9 +46,9 @@ public class GameCanvas extends JPanel {
     private void setupCharacter() {
         GameObjectManager.instance.add(new Background());
         setupPlayer();
-//        GameObjectManager.instance.add(new CreateEnemyMatrix());
+        GameObjectManager.instance.add(new CreateMatrix());
 //        GameObjectManager.instance.add(new CreateEnemyTravel());
-        GameObjectManager.instance.add(new CreateEnemyGrowUp());
+//        GameObjectManager.instance.add(new CreateEnemyGrowUp());
 //        GameObjectManager.instance.add(new CreateRoundShootEnemy());
 //        GameObjectManager.instance.add(new CreateMeteor());
 //        GameObjectManager.instance.add(new CreateEnemyBehind());
