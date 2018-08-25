@@ -23,7 +23,6 @@ public class EnemyTravel extends GameObject implements PhysicBody, HitPoints {
         this.velocity = new Vector2D(2.5f,2.5f);
         this.boxCollider = new BoxCollider(16,16);
         this.renderer = new OvalRenderer(Color.WHITE, 16, 16);
-        this.attributes.add(new EnemyTravelShoot());
         this.runHitObject = new RunHitObject(Player.class);
     }
 

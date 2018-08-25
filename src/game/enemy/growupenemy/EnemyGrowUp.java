@@ -2,7 +2,6 @@ package game.enemy.growupenemy;
 
 import base.GameObject;
 import base.Vector2D;
-import game.enemy.enemytravel.EnemyTravelShoot;
 import game.player.BulletPlayer;
 import game.player.Player;
 import physic.BoxCollider;
@@ -59,8 +58,11 @@ public class EnemyGrowUp extends GameObject implements PhysicBody, HitPoints {
     @Override
     public void getHit(GameObject gameObject) {
         this.getHitPoint(gameObject);
-        if(this.hitPoints == 0)
+        if(this.hitPoints == 0){
+            this.width = 10;
+            this.height = 10;
             this.isAlive = false;
+        }
     }
 
     @Override

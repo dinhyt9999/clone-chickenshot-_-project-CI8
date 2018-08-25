@@ -1,25 +1,54 @@
 package game.enemy.growupenemy;
 
-import base.FrameCounter;
+import action.*;
 import base.GameObject;
 import base.GameObjectManager;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class CreateEnemyGrowUp extends GameObject {
 
     private Random random = new Random();
-    private FrameCounter frameCounter = new FrameCounter(500);
 
-    public void run(){
-        super.run();
-        if (this.frameCounter.checkCounter()) {
-            EnemyGrowUp enemyGrowUp = GameObjectManager.instance.recycle(EnemyGrowUp.class);
-            enemyGrowUp.position.set(this.random.nextInt(1024), 0);
-            enemyGrowUp.velocity.set(this.random.nextInt(3) + 1, this.random.nextInt(3) + 1);
-            this.frameCounter.resetCount();
-        }
+    public List<EnemyGrowUp> enemyGrowUps = new ArrayList<>();
 
+    public CreateEnemyGrowUp() {
+        this.configAction();
     }
 
+    public void configAction() {
+        Action createAction = new ActionAdapter() {
+            @Override
+            public boolean run(GameObject owner) {
+                EnemyGrowUp enemyGrowUp = GameObjectManager.instance.recycle(EnemyGrowUp.class);
+                enemyGrowUp.position.set(random.nextInt(1024), 0);
+                enemyGrowUp.velocity.set(random.nextInt(3) + 1, random.nextInt(3) + 1);
+                enemyGrowUps.add(enemyGrowUp);
+                return true;
+            }
+        };
+
+        Action waitAction = new ActionAdapter() {
+            @Override
+            public boolean run(GameObject owner) {
+                enemyGrowUps.removeIf(enemy -> !enemy.isAlive);
+                return enemyGrowUps.isEmpty();
+            }
+        };
+
+        this.addAction(
+                new SequenceAction(
+                        new WaitAction(20),
+                        createAction,
+                        new RepeatActionForever(
+                                new SequenceAction(
+                                        waitAction,
+                                        createAction
+                                )
+                        )
+                )
+        );
+    }
 }
