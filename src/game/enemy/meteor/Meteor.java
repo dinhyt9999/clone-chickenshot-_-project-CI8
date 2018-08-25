@@ -33,6 +33,8 @@ public class Meteor extends GameObject implements PhysicBody, HitPoints {
         this.position.addUp(this.velocity);
         this.boxCollider.position.set((float)(this.position.x - 12.5), (float)(this.position.y - 12.5));
         this.runHitObject.run(this);
+
+        if (this.position.y > 600) this.isAlive = false;
     }
 
     @Override

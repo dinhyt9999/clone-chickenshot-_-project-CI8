@@ -20,8 +20,5 @@ public class EnemyMatrixMove implements Attribute<EnemyMatrix> {
                 gameObject.temp.set(gameObject.position);
             }
         }
-        if (gameObject.position.y > 610) {
-            gameObject.isAlive = false;
-        }
     }
 }

@@ -39,19 +39,19 @@ public class GameCanvas extends JPanel {
         this.setSize(1024, 600);
         setupBackBuffered();
         setupCharacter();
-        setupBoss();
+//        setupBoss();
         this.setVisible(true);
     }
 
     private void setupCharacter() {
         GameObjectManager.instance.add(new Background());
         setupPlayer();
-//        GameObjectManager.instance.add(new CreateEnemyMatrix());
-//        GameObjectManager.instance.add(new CreateEnemyTravel());
-//        GameObjectManager.instance.add(new CreateEnemyGrowUp());
-//        GameObjectManager.instance.add(new CreateRoundShootEnemy());
-//        GameObjectManager.instance.add(new CreateMeteor());
-//        GameObjectManager.instance.add(new CreateEnemyBehind());
+        GameObjectManager.instance.add(new CreateEnemyMatrix());
+        GameObjectManager.instance.add(new CreateEnemyTravel());
+        GameObjectManager.instance.add(new CreateEnemyGrowUp());
+        GameObjectManager.instance.add(new CreateRoundShootEnemy());
+        GameObjectManager.instance.add(new CreateMeteor());
+        GameObjectManager.instance.add(new CreateEnemyBehind());
     }
 
     private void setupBackBuffered() {

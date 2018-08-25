@@ -31,6 +31,9 @@ public class BulletEnemy extends GameObject implements PhysicBody {
         this.position.addUp(this.velocity);
         this.boxCollider.position.set(this.position.x -2.5f,this.position.y-2.5f);
         this.runHitObject.run(this);
+
+        if (this.position.x > 1024 || this.position.x < 0) this.isAlive = false;
+        if (this.position.y > 600 || this.position.y < 0) this.isAlive = false;
     }
 
     @Override

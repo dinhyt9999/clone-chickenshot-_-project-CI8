@@ -37,6 +37,8 @@ public class EnemyMatrix extends GameObject implements PhysicBody, HitPoints {
         this.boxCollider.position.set(this.position.x - 8, this.position.y - 8);
         this.attributes.add(new EnemyMatrixMove());
         this.runHitObject.run(this);
+
+        if (this.position.y > 600) this.isAlive = false;
     }
 
     @Override

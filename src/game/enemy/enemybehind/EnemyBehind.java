@@ -40,6 +40,11 @@ public class EnemyBehind extends GameObject implements PhysicBody, HitPoints {
         this.position.addUp(velocity);
         this.boxCollider.position.set(this.position.x - 8,this.position.y - 8);
         this.runHitObject.run(this);
+
+        if (this.position.x > 1024 || this.position.x < 0) {
+            this.angle = 0.0;
+            this.isAlive = false;
+        }
     }
 
     @Override
@@ -53,8 +58,10 @@ public class EnemyBehind extends GameObject implements PhysicBody, HitPoints {
     @Override
     public void getHit(GameObject gameObject) {
         this.getHitPoint(gameObject);
-        if(this.hitPoints == 0)
+        if(this.hitPoints == 0){
+            this.angle = 0.0;
             this.isAlive = false;
+        }
     }
 
     @Override

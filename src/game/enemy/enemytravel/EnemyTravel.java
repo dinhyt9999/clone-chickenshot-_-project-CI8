@@ -33,7 +33,16 @@ public class EnemyTravel extends GameObject implements PhysicBody, HitPoints {
         this.position.addUp(velocity);
         this.boxCollider.position.set(this.position.x - 8,this.position.y - 8);
         this.runHitObject.run(this);
+
+        if (this.velocity.x == -5f) {
+            if (this.position.x < 0) this.isAlive = false;
+        } else{
+            if (this.position.x > 1024) this.isAlive = false;
+        }
+
+        if (this.position.y > 600) this.isAlive = false;
     }
+
     @Override
     public void render(Graphics graphics) {
         super.render(graphics);

@@ -33,6 +33,8 @@ public class RoundShootEnemy extends GameObject implements PhysicBody, HitPoints
         super.run();
         this.boxCollider.position.set(this.position.x - 8, this.position.y - 8);
         this.runHitObject.run(this);
+
+        if (this.position.y > 600 || this.position.y < 0) this.isAlive = false;
     }
 
     @Override
