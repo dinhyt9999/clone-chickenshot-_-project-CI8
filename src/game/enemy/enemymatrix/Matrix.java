@@ -28,7 +28,6 @@ public class Matrix extends GameObject {
             enemyMatrix.position.set((i%4)*25,(i/4)*25);
             enemyMatrix.velocity.set(2.5f, 0);
             enemyMatrix.temp.set(enemyMatrix.position);
-            System.out.println(enemyMatrix.velocity.x + ", " + enemyMatrix.velocity.y);
             this.enemyMatrices.add(enemyMatrix);
         }
     }

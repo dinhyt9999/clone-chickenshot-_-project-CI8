@@ -47,11 +47,11 @@ public class GameCanvas extends JPanel {
         GameObjectManager.instance.add(new Background());
         setupPlayer();
         GameObjectManager.instance.add(new CreateMatrix());
-//        GameObjectManager.instance.add(new CreateEnemyTravel());
-//        GameObjectManager.instance.add(new CreateEnemyGrowUp());
-//        GameObjectManager.instance.add(new CreateRoundShootEnemy());
-//        GameObjectManager.instance.add(new CreateMeteor());
-//        GameObjectManager.instance.add(new CreateEnemyBehind());
+        GameObjectManager.instance.add(new CreateEnemyTravel());
+        GameObjectManager.instance.add(new CreateEnemyGrowUp());
+        GameObjectManager.instance.add(new CreateRoundShootEnemy());
+        GameObjectManager.instance.add(new CreateMeteor());
+        GameObjectManager.instance.add(new CreateEnemyBehind());
     }
 
     private void setupBackBuffered() {

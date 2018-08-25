@@ -1,6 +1,6 @@
 package game.enemy.roundshootenemy;
 
-import base.FrameCounter;
+import action.*;
 import base.GameObject;
 import base.GameObjectManager;
 
@@ -8,16 +8,29 @@ import java.util.Random;
 
 public class CreateRoundShootEnemy extends GameObject {
     private Random random = new Random();
-    private FrameCounter frameCounter = new FrameCounter(800);
 
-    @Override
-    public void run() {
-        super.run();
-        if (this.frameCounter.checkCounter()) {
-            RoundShootEnemy enemy = GameObjectManager.instance.recycle(RoundShootEnemy.class);
-            enemy.position.set(random.nextInt(1024), random.nextInt(300));
-            enemy.velocity.set(random.nextInt(2)+1, 0);
-            this.frameCounter.resetCount();
-        }
+    public CreateRoundShootEnemy() {
+        this.configAction();
+    }
+
+    public void configAction() {
+        Action createAction = new ActionAdapter() {
+            @Override
+            public boolean run(GameObject owner) {
+                RoundShootEnemy roundShootEnemy = GameObjectManager.instance.recycle(RoundShootEnemy.class);
+                roundShootEnemy.position.set(random.nextInt(1024), random.nextInt(300));
+                roundShootEnemy.velocity.set(random.nextInt(2)+1, 0);
+                return true;
+            }
+        };
+
+        this.addAction(
+                new RepeatActionForever(
+                        new SequenceAction(
+                                new WaitAction(random.nextInt(1000) + 1000),
+                                createAction
+                        )
+                )
+        );
     }
 }
