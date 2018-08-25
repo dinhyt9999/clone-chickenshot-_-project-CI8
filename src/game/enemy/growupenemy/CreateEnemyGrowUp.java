@@ -40,7 +40,7 @@ public class CreateEnemyGrowUp extends GameObject {
 
         this.addAction(
                 new SequenceAction(
-                        new WaitAction(20),
+                        new WaitAction(200),
                         createAction,
                         new RepeatActionForever(
                                 new SequenceAction(
