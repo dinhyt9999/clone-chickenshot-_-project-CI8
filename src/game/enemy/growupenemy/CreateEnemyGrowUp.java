@@ -34,13 +34,13 @@ public class CreateEnemyGrowUp extends GameObject {
             @Override
             public boolean run(GameObject owner) {
                 enemyGrowUps.removeIf(enemy -> !enemy.isAlive);
-                return enemyGrowUps.isEmpty();
+                return enemyGrowUps.size()==1;
             }
         };
 
         this.addAction(
                 new SequenceAction(
-                        new WaitAction(200),
+                        new WaitAction(2000),
                         createAction,
                         new RepeatActionForever(
                                 new SequenceAction(
